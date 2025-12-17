@@ -344,7 +344,7 @@ export function Contact() {
         >
           <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 max-w-3xl mx-auto border border-border/50">
             <p className="text-foreground/80 mb-4">
-              © 2024 Polineni Ramakrishna. All rights reserved.
+              © 2025 Polineni Ramakrishna. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground italic">
               I hereby confirm that the information provided above is true to the best of my knowledge and belief.
