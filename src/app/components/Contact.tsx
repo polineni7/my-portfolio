@@ -206,7 +206,7 @@ export function Contact() {
           >
             <div className="bg-white/70 backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-2xl border border-white/20">
               <div className="mb-8">
-                <h3 className="text-3xl font-bold text-foreground mb-2">Send a Message</h3>
+                <h3 className="text-3xl font-bold text-foreground mb-2 cursor-pointer">Send a Message</h3>
                 <p className="text-muted-foreground">I'll get back to you as soon as possible</p>
               </div>
 
@@ -324,7 +324,7 @@ export function Contact() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full px-8 py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 group"
+                  className="w-full px-8 py-5 bg-gradient-to-r from-primary to-accent text-white rounded-2xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 group cursor-pointer"
                 >
                   <span>Send Message</span>
                   <Send size={20} className="group-hover:translate-x-1 transition-transform" />

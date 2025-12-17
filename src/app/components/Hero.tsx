@@ -108,14 +108,14 @@ export function Hero() {
             >
               <button
                 onClick={scrollToContact}
-                className="group px-8 py-4 bg-primary text-white rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
+                className="group px-8 py-4 bg-primary text-white rounded-2xl hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2 cursor-pointer"
               >
                 <Mail size={20} />
                 <span className="font-semibold">Get in touch</span>
               </button>
               <button
                 onClick={() => window.open('/pdf/cv.pdf', '_blank')}
-                className="px-8 py-4 bg-white text-foreground border-2 border-border rounded-2xl hover:border-primary hover:bg-secondary/50 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
+                className="px-8 py-4 bg-white text-foreground border-2 border-border rounded-2xl hover:border-primary hover:bg-secondary/50 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2 cursor-pointer"
               >
                 <span className="font-semibold">Download CV</span>
                 <ArrowDown size={20} />

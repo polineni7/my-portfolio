@@ -74,30 +74,32 @@ export function Navigation({ activeSection }: NavigationProps) {
             </motion.button>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-2">
-              {navItems.map((item) => (
-                <motion.button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`relative px-5 py-2.5 rounded-xl transition-all duration-200 font-medium ${
-                    activeSection === item.id
-                      ? 'text-primary'
-                      : 'text-foreground/70 hover:text-foreground'
-                  }`}
-                >
-                  {item.label}
-                  {activeSection === item.id && (
-                    <motion.div
-                      layoutId="activeSection"
-                      className="absolute inset-0 bg-secondary rounded-xl -z-10"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                </motion.button>
-              ))}
-            </div>
+           <div className="hidden md:flex items-center gap-2">
+            {navItems.map((item) => (
+              <motion.button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`relative px-5 py-2.5 rounded-xl transition-all duration-200 font-medium cursor-pointer ${
+                  activeSection === item.id
+                    ? 'text-primary'
+                    : 'text-foreground/70 hover:text-foreground'
+                }`}
+              >
+                {item.label}
+
+                {activeSection === item.id && (
+                  <motion.div
+                    layoutId="activeSection"
+                    className="absolute inset-0 bg-secondary rounded-xl -z-10"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </motion.button>
+            ))}
+          </div>
+
 
             {/* Mobile Menu Button */}
             <button
@@ -137,7 +139,7 @@ export function Navigation({ activeSection }: NavigationProps) {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
                     onClick={() => scrollToSection(item.id)}
-                    className={`w-full text-left px-6 py-4 rounded-2xl transition-all duration-200 font-medium ${
+                    className={`w-full text-left px-6 py-4 rounded-2xl transition-all duration-200 font-medium cursor-pointer ${
                       activeSection === item.id
                         ? 'bg-primary text-white shadow-lg'
                         : 'text-foreground/70 hover:bg-secondary hover:text-foreground'
